@@ -1,0 +1,26 @@
+.navigation {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    border-style: double;
+}
+
+.welcome {
+    display: grid;
+    grid-column-start: 3;
+    justify-content: center;
+}
+
+.profile {
+    display: grid;
+    grid-column-start: 1;
+    justify-content: center;
+    padding: 5px;
+}
+
+.logout {
+    display: grid;
+    grid-column-start: 5;
+    justify-content: center;
+    padding: 5px;
+}
