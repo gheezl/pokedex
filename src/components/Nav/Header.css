@@ -10,14 +10,12 @@
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 20% 20% 20% 20% 20%;
     background-color:#64f38c;
-    margin: 10px;
 }
 
 .welcome {
     display: grid;
     grid-column-start: 3;
     justify-content: center;
-    
 }
 
 .profile {
