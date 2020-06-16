@@ -1,0 +1,33 @@
+.card {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    justify-content: center;
+    border: solid 5px black;
+    box-shadow: 5px 5px black;
+    margin: 20px;
+    padding: 2em;
+    transition: all .25s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02); 
+}
+
+.pokemon {
+    display: grid;
+    grid-column-start: 1;
+}
+
+.name {
+    display: grid;
+    grid-column-start: 3;
+    justify-content: center;
+}
+
+
+.species {
+    display: grid;
+    grid-column-start: 3;
+    justify-content: center;
+}

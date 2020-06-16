@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-import Header from "./components/Nav/Header.js"
-import Pokemon from "./components/pokemon/Pokemon.js"
+import Header from "./components/Nav/Header.js";
+import Pokemon from "./components/pokemon/Pokemon.js";
 
 class App extends Component {
   constructor() {
@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   getPokemon = () => {
-    fetch("https://pokeapi.glitch.me/v1/pokemon/:slug")
+    fetch("https://pokeapi.glitch.me/v1/pokemon/:pikachu")
       .then(response => console.log(response))
   }
 
@@ -20,9 +20,10 @@ class App extends Component {
     return (
       <Fragment>
         <Header />
-        <Fragment>
+        <div>
           <Pokemon getPokemon={this.getPokemon} />
-        </Fragment>
+          <Pokemon getPokemon={this.getPokemon} />
+        </div>
       </Fragment>
     )
   }
