@@ -22,6 +22,7 @@
 .name {
     display: grid;
     grid-column-start: 3;
+    grid-row-start: 2;
     justify-content: center;
 }
 
@@ -29,5 +30,6 @@
 .species {
     display: grid;
     grid-column-start: 3;
+    grid-row-start: 3;
     justify-content: center;
 }

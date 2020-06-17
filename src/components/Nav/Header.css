@@ -14,7 +14,7 @@
 
 .welcome {
     display: grid;
-    grid-column-start: 3;
+    grid-column-start: 1;
     justify-content: center;
     box-shadow: 5px;
 }
@@ -25,14 +25,8 @@
 
 .profile {
     display: grid;
-    grid-column-start: 1;
-    justify-content: center;
-    padding: 5px;
-}
-
-.logout {
-    display: grid;
     grid-column-start: 5;
     justify-content: center;
     padding: 5px;
 }
+

@@ -9,23 +9,28 @@ class App extends Component {
     super()
     this.state = {
       currentPokemon: "",
-      currentPokemonID: "",
+      currentPokemonId: "",
+      currentPokemonExperience: "",
     }
   }
 
   componentDidMount = () => {
     fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
       .then(response => response.json())
-      .then(pokemon => this.setState({ currentPokemon: pokemon.name, currentPokemonID: pokemon.order }))
+      .then(pokemon => this.setState({
+        currentPokemon: pokemon.name,
+        currentPokemonId: pokemon.order,
+        currentPokemonExperience: pokemon.base_experience
+      }))
     console.log(this.state.currentPokemon)
-    console.log(this.state.currentPokemonID)
+    console.log(this.state.currentPokemonId)
   }
 
   getPokemon = () => {
     fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
       .then(response => response.json())
       .then(pokemon => console.log(pokemon))
-    console.log(this.state.currentPokemonID)
+    console.log(this.state.currentPokemonExperience)
   }
 
   render() {
@@ -33,7 +38,12 @@ class App extends Component {
       <Fragment>
         <Header />
         <div>
-          <Pokemon getPokemon={this.getPokemon} pokemonInfo={this.state.currentPokemon} pokemonId={this.state.currentPokemonID} />
+          <Pokemon
+            getPokemon={this.getPokemon}
+            pokemonInfo={this.state.currentPokemon}
+            pokemonId={this.state.currentPokemonId}
+            pokemonExperience={this.state.currentPokemonExperience}
+          />
           <Pokemon getPokemon={this.getPokemon} />
         </div>
       </Fragment>
