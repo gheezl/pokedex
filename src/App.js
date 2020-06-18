@@ -2,35 +2,29 @@ import React, { Component, Fragment } from 'react';
 import './App.css';
 import Header from "./components/Nav/Header.js";
 import Pokemon from "./components/pokemon/Pokemon.js";
-import axious from "axios";
+import Input from "./components/input/Input.js"
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
+      searchedPokemon: "",
       currentPokemon: "",
       currentPokemonId: "",
       currentPokemonExperience: "",
     }
   }
 
-  componentDidMount = () => {
-    fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+  getPokemon = () => {
+    this.setState({ searchedPokemon: "pikachu" })
+    fetch(`https://pokeapi.co/api/v2/pokemon/${this.state.searchedPokemon}`)
       .then(response => response.json())
       .then(pokemon => this.setState({
         currentPokemon: pokemon.name,
         currentPokemonId: pokemon.order,
         currentPokemonExperience: pokemon.base_experience
       }))
-    console.log(this.state.currentPokemon)
-    console.log(this.state.currentPokemonId)
-  }
-
-  getPokemon = () => {
-    fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-      .then(response => response.json())
-      .then(pokemon => console.log(pokemon))
-    console.log(this.state.currentPokemonExperience)
+    console.log(this.state.searchedPokemon)
   }
 
   render() {
@@ -38,13 +32,12 @@ class App extends Component {
       <Fragment>
         <Header />
         <div>
+          <Input getPokemon={this.getPokemon} />
           <Pokemon
-            getPokemon={this.getPokemon}
             pokemonInfo={this.state.currentPokemon}
             pokemonId={this.state.currentPokemonId}
             pokemonExperience={this.state.currentPokemonExperience}
           />
-          <Pokemon getPokemon={this.getPokemon} />
         </div>
       </Fragment>
     )

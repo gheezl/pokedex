@@ -6,8 +6,7 @@ const Header = () => {
     return (
         <Fragment>
             <div className="navigation" >
-
-                <h2 className="welcome hvr-float-shadow" >pokedex</h2>
+                <h2 className="welcome" >pokedex</h2>
                 <h2 className="profile" >profile</h2>
             </div>
         </Fragment>

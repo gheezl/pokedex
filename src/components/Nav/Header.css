@@ -17,10 +17,12 @@
     grid-column-start: 1;
     justify-content: center;
     box-shadow: 5px;
+    color: white;
+    transition: all .25s ease-in-out;
 }
 
 .welcome:hover {
-    box-shadow: 5px black;
+    transform: scale(1.25);
 }
 
 .profile {
@@ -28,5 +30,11 @@
     grid-column-start: 5;
     justify-content: center;
     padding: 5px;
+    color: white;
+    transition: all .25s ease-in-out;
+}
+
+.profile:hover {
+    transform: scale(1.25);
 }
 
