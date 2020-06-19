@@ -33,3 +33,12 @@
     grid-row-start: 3;
     justify-content: center;
 }
+
+.sprite {
+    display: grid;
+    grid-column-start: 3;
+    justify-content: center;
+    outline: black ridge;
+    padding: 5px;
+    size: 50%;
+}

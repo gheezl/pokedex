@@ -6,10 +6,10 @@ import "./Input.css"
 const Input = ({ getPokemon }) => {
     return (
         <Fragment>
-            <div className="search">
+            {/* <div className="search">
                 <input className="searchBar" type="text" placeholder="Search Pokemon" />
                 <button onClick={getPokemon} className="button" >GO!</button>
-            </div>
+            </div> */}
         </Fragment>
     )
 }
