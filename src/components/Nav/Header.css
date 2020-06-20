@@ -17,12 +17,12 @@
     grid-column-start: 1;
     justify-content: center;
     box-shadow: 5px;
-    color: white;
+    color: black;
     transition: all .25s ease-in-out;
 }
 
 .welcome:hover {
-    transform: scale(1.25);
+    transform: scale(1.00);
 }
 
 .search {
@@ -36,11 +36,11 @@
     grid-column-start: 5;
     justify-content: center;
     padding: 5px;
-    color: white;
+    color: black;
     transition: all .25s ease-in-out;
 }
 
 .profile:hover {
-    transform: scale(1.25);
+    transform: scale(1.00);
 }
 

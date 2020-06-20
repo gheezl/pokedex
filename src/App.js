@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import './App.css';
 import Header from "./components/Nav/Header.js";
 import Pokemon from "./components/pokemon/Pokemon.js";
+import PlaceHolder from "./components/placeHolder/PlaceHolder.js"
 
 class App extends Component {
   constructor() {
@@ -12,7 +13,12 @@ class App extends Component {
       currentPokemonId: "",
       currentPokemonExperience: "",
       currentPokemonSprite: "",
+      route: "",
     }
+  }
+
+  onRouteChange = () => {
+
   }
 
   onSearchChange = (event) => {
@@ -28,6 +34,7 @@ class App extends Component {
         currentPokemonId: pokemon.order,
         currentPokemonExperience: pokemon.base_experience
       }))
+    this.setState({ route: "pokemon" })
   }
 
   getPokemon2 = () => {
@@ -42,16 +49,18 @@ class App extends Component {
         <Header
           onSearchChange={this.onSearchChange}
           getPokemon={this.getPokemon}
-        // getPokemon2={this.getPokemon2}
-
+          getPokemon2={this.getPokemon2}
         />
         <div>
-          <Pokemon
-            pokemonSprite={this.state.currentPokemonSprite}
-            pokemonInfo={this.state.currentPokemon}
-            pokemonId={this.state.currentPokemonId}
-            pokemonExperience={this.state.currentPokemonExperience}
-          />
+          {this.state.route === "pokemon"
+            ? <Pokemon
+              pokemonSprite={this.state.currentPokemonSprite}
+              pokemonInfo={this.state.currentPokemon}
+              pokemonId={this.state.currentPokemonId}
+              pokemonExperience={this.state.currentPokemonExperience}
+            />
+            : <PlaceHolder />
+          }
         </div>
       </Fragment>
     )

@@ -1,0 +1,14 @@
+.placeholder {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    padding: 50px;
+    margin: 50px;
+}
+
+.text {
+    display: grid;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    justify-self: center;
+}
