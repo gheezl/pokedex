@@ -10,7 +10,7 @@ const Header = ({ onSearchChange, getPokemon, getPokemon2 }) => {
 
                 <div className="search">
                     <input onChange={onSearchChange} className="searchBar" type="text" placeholder="Search Pokemon" />
-                    <button onClick={getPokemon} className="button" >GO!</button>
+                    <button onClick={getPokemon} className="button" >🔎</button>
                 </div>
 
                 <h2 className="profile" >profile</h2>
