@@ -9,12 +9,20 @@
 
 .searchBar {
     display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.search {
+    display: grid;
     grid-column-start: 3;
+    grid-row-start: 1;
     justify-content: center;
 }
 
 .button {
     display: grid;
     grid-column-start: 4;
+    grid-row-start: 1;
     justify-content: center;
 }

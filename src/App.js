@@ -3,6 +3,8 @@ import './App.css';
 import Header from "./components/Nav/Header.js";
 import Pokemon from "./components/pokemon/Pokemon.js";
 import PlaceHolder from "./components/placeHolder/PlaceHolder.js"
+import Input from "./components/input/Input.js"
+
 
 class App extends Component {
   constructor() {
@@ -34,6 +36,9 @@ class App extends Component {
         currentPokemonId: pokemon.order,
         currentPokemonExperience: pokemon.base_experience
       }))
+      .catch(err => {
+        console.log(err)
+      })
     this.setState({ route: "pokemon" })
   }
 
@@ -46,10 +51,12 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <Header
+        <Header />
+        <Input
           onSearchChange={this.onSearchChange}
           getPokemon={this.getPokemon}
           getPokemon2={this.getPokemon2}
+
         />
         <div>
           {this.state.route === "pokemon"
@@ -62,7 +69,7 @@ class App extends Component {
             : <PlaceHolder />
           }
         </div>
-      </Fragment>
+      </Fragment >
     )
   }
 }

@@ -6,6 +6,7 @@ const Pokemon = ({ getPokemon2, getPokemon, pokemonInfo, pokemonId, pokemonExper
     return (
         <Fragment>
             <div onClick={getPokemon} className="card">
+
                 <div className="sprite">
                     <img className="image" alt="" src={pokemonSprite} />
                 </div>

@@ -3,13 +3,15 @@ import "./Input.css"
 
 
 
-const Input = ({ getPokemon }) => {
+const Input = ({ getPokemon, onSearchChange }) => {
     return (
         <Fragment>
-            {/* <div className="search">
-                <input className="searchBar" type="text" placeholder="Search Pokemon" />
-                <button onClick={getPokemon} className="button" >GO!</button>
-            </div> */}
+            <div className="searchBar" >
+                <div className="search">
+                    <input onChange={onSearchChange} type="text" placeholder="Search Pokemon" />
+                    <button onClick={getPokemon} placeholder="">🔎</button>
+                </div>
+            </div>
         </Fragment>
     )
 }

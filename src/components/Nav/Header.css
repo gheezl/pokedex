@@ -25,12 +25,6 @@
     transform: scale(1.00);
 }
 
-.search {
-    display: grid;
-    grid-column-start: 3;
-    justify-content: center;
-}
-
 .profile {
     display: grid;
     grid-column-start: 5;
