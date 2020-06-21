@@ -51,8 +51,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <Header />
-        <Input
+        <Header
           onSearchChange={this.onSearchChange}
           getPokemon={this.getPokemon}
           getPokemon2={this.getPokemon2}

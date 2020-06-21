@@ -19,6 +19,8 @@
     box-shadow: 5px;
     color: black;
     transition: all .25s ease-in-out;
+    margin: 25px;
+    /* outline: black double; */
 }
 
 .welcome:hover {
@@ -32,9 +34,29 @@
     padding: 5px;
     color: black;
     transition: all .25s ease-in-out;
+    margin: 25px;
 }
 
 .profile:hover {
     transform: scale(1.00);
 }
 
+.search {
+    display: grid;
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.input {
+    display: grid;
+    grid-column-start: 3;
+    padding: 10px;
+    margin: 25px;
+}
+
+.button {
+    display: grid;
+    grid-column-start: 3;
+    padding: 10px;
+    margin: 25px;
+}
