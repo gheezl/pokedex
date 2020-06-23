@@ -3,7 +3,6 @@ import './App.css';
 import Header from "./components/Nav/Header.js";
 import Pokemon from "./components/pokemon/Pokemon.js";
 import PlaceHolder from "./components/placeHolder/PlaceHolder.js"
-import Input from "./components/input/Input.js"
 
 
 class App extends Component {
