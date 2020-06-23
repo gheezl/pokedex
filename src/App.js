@@ -11,10 +11,7 @@ class App extends Component {
     super()
     this.state = {
       searchedPokemon: "",
-      currentPokemon: "",
-      currentPokemonId: "",
-      currentPokemonExperience: "",
-      currentPokemonSprite: "",
+      pokemon: "",
       route: "",
     }
   }
@@ -31,10 +28,7 @@ class App extends Component {
     fetch(`https://pokeapi.co/api/v2/pokemon/${this.state.searchedPokemon}`)
       .then(response => response.json())
       .then(pokemon => this.setState({
-        currentPokemonSprite: pokemon.sprites.front_default,
-        currentPokemon: pokemon.name,
-        currentPokemonId: pokemon.order,
-        currentPokemonExperience: pokemon.base_experience
+        pokemon: pokemon
       }))
       .catch(err => {
         console.log(err)
@@ -60,9 +54,7 @@ class App extends Component {
         <div>
           {this.state.route === "pokemon"
             ? <Pokemon
-              pokemonSprite={this.state.currentPokemonSprite}
-              pokemonInfo={this.state.currentPokemon}
-              pokemonId={this.state.currentPokemonId}
+              pokemon={this.state.pokemon}
               pokemonExperience={this.state.currentPokemonExperience}
             />
             : <PlaceHolder />
