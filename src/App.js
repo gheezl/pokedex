@@ -12,6 +12,7 @@ class App extends Component {
     this.state = {
       searchedPokemon: "",
       pokemon: "",
+      error: "",
       route: "",
       route2: "",
     }
