@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./components/Nav/Header.js";
 import Pokemon from "./components/pokemon/Pokemon.js";
 import PlaceHolder from "./components/placeHolder/PlaceHolder.js"
+import PokemonDisplay from "./components/PokemonDisplay/PokemonDisplay.js"
 
 
 class App extends Component {
@@ -12,11 +13,8 @@ class App extends Component {
       searchedPokemon: "",
       pokemon: "",
       route: "",
+      route2: "",
     }
-  }
-
-  onRouteChange = () => {
-
   }
 
   onSearchChange = (event) => {
@@ -33,6 +31,12 @@ class App extends Component {
         console.log(err)
       })
     this.setState({ route: "pokemon" })
+  }
+
+  onRouteChange = (route) => {
+    if (route === "Display") {
+      this.setState({ route2: route })
+    }
   }
 
   getPokemon2 = () => {
@@ -52,10 +56,14 @@ class App extends Component {
         />
         <div>
           {this.state.route === "pokemon"
-            ? <Pokemon
-              pokemon={this.state.pokemon}
-              pokemonExperience={this.state.currentPokemonExperience}
-            />
+            ? (this.state.route2 === "Display"
+              ? <PokemonDisplay />
+              : <Pokemon
+                onRouteChange={this.onRouteChange}
+                pokemon={this.state.pokemon}
+                pokemonExperience={this.state.currentPokemonExperience}
+              />
+            )
             : <PlaceHolder />
           }
         </div>

@@ -8,7 +8,7 @@ const Header = ({ onSearchChange, getPokemon, getPokemon2 }) => {
             <div className="navigation" >
                 <h2 className="welcome" >pokedex</h2>
                 <input className="input" onChange={onSearchChange} type="text" placeholder="Search Pokemon" />
-                <button className="button" onClick={getPokemon2} placeholder="">🔎</button>
+                <button className="button" onClick={getPokemon} placeholder="">🔎</button>
                 <h2 className="profile" >profile</h2>
             </div>
         </Fragment>
