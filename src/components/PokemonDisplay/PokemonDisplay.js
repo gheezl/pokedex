@@ -3,10 +3,12 @@ import "./PokemonDisplay.css"
 import Pokemon from '../pokemon/Pokemon';
 
 
-const PokemonDisplay = () => {
+const PokemonDisplay = ({ pokemon }) => {
     return (
         <Fragment>
-            <h1>Hi</h1>
+            <div>
+                <h1 className="name" >{pokemon.name}</h1>
+            </div>
         </Fragment>
     )
 }

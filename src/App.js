@@ -30,7 +30,10 @@ class App extends Component {
       .catch(err => {
         console.log(err)
       })
-    this.setState({ route: "pokemon" })
+    this.setState({
+      route: "pokemon",
+      route2: ""
+    })
   }
 
   onRouteChange = (route) => {
@@ -49,6 +52,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header
+          onRouteChange={this.onRouteChange}
           onSearchChange={this.onSearchChange}
           getPokemon={this.getPokemon}
           getPokemon2={this.getPokemon2}
@@ -57,7 +61,9 @@ class App extends Component {
         <div>
           {this.state.route === "pokemon"
             ? (this.state.route2 === "Display"
-              ? <PokemonDisplay />
+              ? <PokemonDisplay
+                pokemon={this.state.pokemon}
+              />
               : <Pokemon
                 onRouteChange={this.onRouteChange}
                 pokemon={this.state.pokemon}

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import "./Header.css"
 
 
-const Header = ({ onSearchChange, getPokemon, getPokemon2 }) => {
+const Header = ({ onSearchChange, getPokemon, getPokemon2, onRouteChange }) => {
     return (
         <Fragment>
             <div className="navigation" >
