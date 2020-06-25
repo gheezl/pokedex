@@ -29,7 +29,7 @@ class App extends Component {
         pokemon: pokemon
       }))
       .catch(err => {
-        console.log(err)
+        this.setState({ error: err })
       })
     this.setState({
       route: "pokemon",
